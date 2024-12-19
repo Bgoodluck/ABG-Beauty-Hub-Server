@@ -101,48 +101,7 @@ const getAllAppointments = async (req, res) => {
     }
   };
   
-//   const adminUpdateAppointmentStatus = async (req, res) => {
-//     try {
-//       const { id } = req.params;
-//       const { status, notes } = req.body;
-  
-//       // Validate status
-//       const validStatuses = ['Pending', 'Confirmed', 'Completed', 'Cancelled'];
-//       if (!validStatuses.includes(status)) {
-//         return res.status(400).json({ 
-//           success: false, 
-//           message: 'Invalid status' 
-//         });
-//       }
-  
-//       // Find and update the appointment
-//       const updatedAppointment = await AppointmentModel.findByIdAndUpdate(
-//         id,
-//         { status, adminNotes: notes },
-//         { new: true, runValidators: true }
-//       );
-  
-//       if (!updatedAppointment) {
-//         return res.status(404).json({ 
-//           success: false, 
-//           message: 'Appointment not found' 
-//         });
-//       }
-  
-//       return res.json({ 
-//         success: true, 
-//         message: 'Appointment status updated successfully', 
-//         data: updatedAppointment 
-//       });
-//     } catch (error) {
-//       console.error(error);
-//       return res.status(500).json({ 
-//         success: false, 
-//         message: 'Error updating appointment status', 
-//         error: error.message 
-//       });
-//     }
-//   };
+
 
 const getSingleAppointment = async (req, res) => {
     try {
