@@ -12,7 +12,7 @@ const currency = "GBP"
 const deliveryCharge = 10
 
 // My Frontend Url
-const frontend_Url = "http:localhost:5173";
+const frontend_Url = "https://abg-beauty-hub-client.vercel.app";
 
 // GATEWAY INITILIZATIONS
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -184,7 +184,7 @@ const placeOrderFlutterwave = async (req, res) => {
             amount,
             currency: 'NGN',
             delivery_fee: deliveryCharge, 
-            redirect_url: "http://localhost:5173/cart", 
+            redirect_url: "https://abg-beauty-hub-client.vercel.app/cart", 
             customer: {
                 email,
                 name: userId, 
